@@ -1,0 +1,246 @@
+import React from 'react';
+import { Article } from '../lib/types';
+import { PlainText } from '../components/PlainText';
+import { ChevronLeft } from 'lucide-react';
+
+// In a real build, these objects would be generated from .md files in content/blog/
+// and likely stored as JSON. For this React SPA, we export them as objects with TSX content.
+
+export const jobsDisappearing2030: Article = {
+  id: 'jobs-disappearing-2030',
+  categoryId: 'work',
+  title: 'המקצועות שייעלמו עד 2030 (האם העבודה שלך ברשימה?)',
+  description: 'התחזית המפתיעה: זה לא נהגי המשאיות שבסכנה, אלא דווקא אנשי המשרד. מי הולך הביתה ומי יהפוך לבלתי-מוחלף?',
+  readTimeMinutes: 8,
+  lastUpdated: '02/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+    <div className="bg-red-50 border-r-4 border-red-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-red-900 mb-2">האמת הכואבת: הבינוניות מתה</h3>
+      <p className="text-red-800 text-sm md:text-base leading-relaxed">
+        בואו נשים את הקלפים על השולחן: אם העבודה שלכם מורכבת בעיקר מלקחת מידע ממקום א' ולהעביר אותו למקום ב', או לכתוב טקסטים גנריים - אתם בבעיה. ה-AI לא יחליף את ה"מומחים", אבל הוא יחסל לחלוטין את ה"בינוניים". החדשות הטובות? יש דרך פשוטה להינצל.
+      </p>
+    </div>
+    <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4">המהפכה השקטה של הצווארון הלבן</h3>
+    <p>במשך שנים אמרו לנו שהרובוטים יקחו את עבודות הכפיים: פועלי פס ייצור, נהגים, מנקים. טעינו בענק. הרובוטים הפיזיים עדיין מסורבלים ויקרים.</p>
+  </PlainText>
+};
+
+export const isAiDangerous: Article = {
+  id: 'is-ai-dangerous',
+  categoryId: 'safety',
+  title: 'האם ה-AI ישמיד את האנושות? (ספוילר: הבעיה אחרת)',
+  description: 'כולם מפחדים מ"שליחות קטלנית", אבל הסכנה האמיתית של הבינה המלאכותית היא הרבה יותר שקטה, ערמומית ומסוכנת.',
+  readTimeMinutes: 7,
+  lastUpdated: '03/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+    <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-blue-900 mb-2">תרגיעו את הפאניקה, תגבירו את הערנות</h3>
+      <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+        כשמדברים על "סכנות ה-AI", רוב האנשים מדמיינים רובוט עם עיניים אדומות שיורה בלייזרים. המציאות? ה-AI לא צריך לירות בנו כדי לגרום נזק.
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const save10HoursAWeek: Article = {
+  id: 'save-10-hours-a-week',
+  categoryId: 'personal',
+  title: 'מדריך לעצלנים: איך חסכתי 10 שעות בשבוע עם AI',
+  description: 'בלי סיסמאות ובלי תיאוריות. רשימת ה"האקים" הקטנים לחיים שיפנו לכם זמן לנטפליקס, לילדים או סתם לשינה.',
+  readTimeMinutes: 5,
+  lastUpdated: '04/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+    <div className="bg-yellow-50 border-r-4 border-yellow-500 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-yellow-900 mb-2">זמן זה כסף? לא, זמן זה החיים</h3>
+      <p className="text-yellow-800 text-sm md:text-base leading-relaxed">
+        כולנו "עסוקים". כולנו טובעים במיילים, סידורים, הודעות ובירוקרטיה. רוב האנשים משתמשים ב-ChatGPT רק כדי לשאול שאלות טריוויה, ומפספסים את המהפכה האמיתית.
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const aiDangerHumanity: Article = {
+  id: 'ai-danger-humanity',
+  categoryId: 'safety',
+  title: 'האם בינה מלאכותית מסוכנת לאנושות?',
+  description: 'בינה מלאכותית לא מסוכנת כי היא “חכמה מדי” — היא מסוכנת כשאנחנו סומכים עליה יותר מדי.',
+  readTimeMinutes: 5,
+  lastUpdated: '04/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+     <div className="bg-red-50 border-r-4 border-red-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-red-900 mb-2">בשורה התחתונה: עניין של שליטה</h3>
+      <p className="text-red-800 text-sm md:text-base leading-relaxed">
+        אל תחשבו על AI כמו על ישות שחושבת או רוצה דברים. תחשבו עליה כמו על כלי עוצמתי מאוד, בלי שיקול דעת ובלי אחריות.
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const personaTechnique: Article = {
+  id: 'persona-technique',
+  categoryId: 'skills',
+  title: 'טכניקת הפרסונה: "תתנהג כמו..."',
+  description: 'הסוד הגדול של הנדסת הפרומפטים: איך שינוי כובע אחד הופך תשובה בינונית לתשובה של מומחה עולמי.',
+  readTimeMinutes: 6,
+  lastUpdated: '04/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+    <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-blue-900 mb-2">בשורה התחתונה: תנו לו תפקיד</h3>
+      <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+        ה-AI הוא כמו שחקן הוליוודי מוכשר שיכול לשחק כל דמות, אבל אם לא תתנו לו תסריט, הוא ישחק דמות של "פקיד משעמם".
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const chainOfThought: Article = {
+  id: 'chain-of-thought',
+  categoryId: 'skills',
+  title: 'לחשוב בקול רם: השיטה שתמנע מה-AI לעשות טעויות',
+  description: 'טכניקת "שרשרת המחשבה" (Chain of Thought) היא הדרך הכי טובה לגרום למודל לפתור בעיות מורכבות בלי ליפול בפח.',
+  readTimeMinutes: 7,
+  lastUpdated: '04/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1509228627129-7252f3057dc5?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+     <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-blue-900 mb-2">בשורה התחתונה: אל תתן לו לקפוץ למסקנות</h3>
+      <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+        כשאתם שואלים שאלה מסובכת (חידה, מתמטיקה, או לוגיקה), ה-AI מנסה לפעמים לנחש את התשובה הסופית מיד, וזה גורם לו לטעות.
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const aiSaveTimeWeekly: Article = {
+  id: 'ai-save-time-weekly',
+  categoryId: 'work',
+  title: 'איך בינה מלאכותית יכולה לחסוך לך שעות עבודה',
+  description: 'AI לא עובד במקומך — הוא חוסך לך את החלקים המעצבנים של העבודה.',
+  readTimeMinutes: 4,
+  lastUpdated: '04/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+    <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-blue-900 mb-2">בשורה התחתונה: התייעלות</h3>
+      <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+        AI לא עובד במקומך — הוא חוסך לך את החלקים המעצבנים של העבודה.
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const aiReplacementReality: Article = {
+  id: 'ai-replacement-reality',
+  categoryId: 'work',
+  title: 'האם AI הולך להחליף את העבודה שלך?',
+  description: 'AI לא מחליף אנשים. הוא מחליף אנשים שלא משתמשים בו.',
+  readTimeMinutes: 4,
+  lastUpdated: '04/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1531297461136-82lw8z0e3y?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+    <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-blue-900 mb-2">בשורה התחתונה: שדרוג ולא החלפה</h3>
+      <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+        AI לא מחליף אנשים. הוא מחליף אנשים שלא משתמשים בו.
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const howChatgptWorksSimple: Article = {
+  id: 'how-chatgpt-works-simple',
+  categoryId: 'basics',
+  title: 'איך ChatGPT באמת עובד (בלי מתמטיקה)',
+  description: 'ChatGPT לא יודע דברים — הוא יודע להשלים משפטים.',
+  readTimeMinutes: 5,
+  lastUpdated: '04/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+    <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-blue-900 mb-2">בשורה התחתונה: השלמה חכמה</h3>
+      <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+        ChatGPT לא יודע דברים — הוא יודע להשלים משפטים.
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const aiConfidenceErrors: Article = {
+  id: 'ai-confidence-errors',
+  categoryId: 'reliability',
+  title: 'למה בינה מלאכותית טועה בביטחון מלא',
+  description: 'AI לא יודע שהוא טועה — ולכן הוא גם לא מהסס.',
+  readTimeMinutes: 4,
+  lastUpdated: '04/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1599507593499-a3f7d7d97667?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+    <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-blue-900 mb-2">בשורה התחתונה: ביטחון מטעה</h3>
+      <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+        AI לא יודע שהוא טועה — ולכן הוא גם לא מהסס.
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const humanAiInteractionGuide: Article = {
+  id: 'human-ai-interaction-guide',
+  categoryId: 'basics',
+  title: 'איך לדבר עם AI? (מדריך למתחילים)',
+  description: 'הסבר פשוט וברור איך המחשב "מבין" אתכם ואיך לקבל תשובות טובות יותר, בלי מילים מסובכות.',
+  readTimeMinutes: 5,
+  lastUpdated: '01/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+    <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-blue-900 mb-2">בשורה התחתונה: זה לא בן אדם, זו מכונת השלמות</h3>
+      <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+        אל תחשבו על ה-AI כמו על חבר חכם שיודע הכל. תחשבו עליו כמו על <strong>"השלמה אוטומטית" משוכללת מאוד</strong>.
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const privacySafetyGuide: Article = {
+  id: 'privacy-safety-guide',
+  categoryId: 'safety',
+  title: 'המדריך לפרטיות: מה אסור בשום אופן לספר ל-AI?',
+  description: 'האם מותר להעלות מסמכים רפואיים? סיסמאות? סודות מסחריים? כל מה שצריך לדעת כדי להישאר בטוחים.',
+  readTimeMinutes: 5,
+  lastUpdated: '01/2026',
+  imageUrl: 'https://images.unsplash.com/photo-1510915361405-ef8db9036289?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+     <div className="bg-red-50 border-r-4 border-red-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-red-900 mb-2">כלל הברזל: אם זה סוד, זה לא עולה ל-AI</h3>
+      <p className="text-red-800 text-sm md:text-base leading-relaxed">
+        ברירת המחדל של רוב כלי ה-AI היא להשתמש בשיחות שלכם כדי לאמן ולשפר את המודל.
+      </p>
+    </div>
+  </PlainText>
+};
+
+export const howToAskGoodQuestion: Article = {
+  id: 'how-to-ask-good-question',
+  categoryId: 'basics',
+  title: 'נוסחת הקסם (CPF): איך לכתוב פרומפט מושלם',
+  description: 'שיטה פשוטה בת 3 שלבים שתבטיח שה-AI יבין אתכם בכל פעם מחדש.',
+  readTimeMinutes: 6,
+  lastUpdated: '03/2024',
+  imageUrl: 'https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&q=80&w=1000',
+  content: <PlainText>
+    <div className="bg-blue-50 border-r-4 border-blue-600 p-4 mb-6 rounded-lg">
+      <h3 className="text-lg font-bold text-blue-900 mb-2">בשורה התחתונה: תבנית CPF</h3>
+      <p className="text-blue-800 text-sm md:text-base leading-relaxed">
+        כדי לא לשכוח שום פרט חשוב, תמיד תבנו את הבקשה שלכם (הפרומפט) לפי שלושה מרכיבים: 
+        <br/>1. <strong>C</strong>ontext (הקשר - מי אני ומה הרקע).
+        <br/>2. <strong>P</strong>urpose (מטרה - מה אני רוצה להשיג).
+        <br/>3. <strong>F</strong>ormat (פורמט - איך התשובה צריכה להיראות).
+      </p>
+    </div>
+  </PlainText>
+};

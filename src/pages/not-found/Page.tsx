@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '../../routes/router';
+import { Link } from '../../lib/router';
 
 export function Page() {
   return (

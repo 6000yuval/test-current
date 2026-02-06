@@ -1,5 +1,5 @@
 import React from 'react';
-import { GLOSSARY } from '../../data/contentIndex';
+import { GLOSSARY } from '../../lib/contentIndex';
 import { Search } from 'lucide-react';
 
 export function Page() {

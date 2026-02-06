@@ -1,10 +1,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { RouterProvider, useRouter } from './routes/router';
-import { AppShell } from './app/AppShell';
+import { RouterProvider, useRouter } from './lib/router';
+import { AppShell } from './components/AppShell';
 
 // Pages
-import { Page as HomePage } from './pages/home/Page';
+import { Page as HomePage } from './pages/index/Page';
 import { Page as GlossaryPage } from './pages/glossary/Page';
 import { Page as PostPage } from './pages/blog/PostPage';
 import { Page as NotFoundPage } from './pages/not-found/Page';
@@ -23,7 +23,7 @@ const AppContent = () => {
     const id = path.split('/')[2];
     if (id) {
       Component = PostPage;
-      pageProps = { id }; // Pass ID as prop, Page fetches data
+      pageProps = { id };
     } else {
        Component = NotFoundPage;
     }

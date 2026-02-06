@@ -1,8 +1,8 @@
 import React from 'react';
-import { getPost, CATEGORIES, getAllPosts } from '../../data/contentIndex';
-import { Link } from '../../routes/router';
+import { getPost, CATEGORIES, getAllPosts } from '../../lib/contentIndex';
+import { Link } from '../../lib/router';
 import { Clock, Calendar, ArrowRight } from 'lucide-react';
-import { buildArticleJsonLd } from '../../seo/head';
+import { buildArticleJsonLd } from '../../lib/seo';
 import { Page as NotFoundPage } from '../not-found/Page';
 
 export function Page({ id }: { id: string }) {
