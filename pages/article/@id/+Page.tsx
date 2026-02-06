@@ -1,67 +1,14 @@
-
 import React from 'react';
 import { ARTICLES, CATEGORIES } from '../../../lib/data';
 import { Link, notFound } from '../../../lib/router';
 import { Clock, Calendar, ArrowRight } from 'lucide-react';
 import { SITE_URL, SITE_NAME } from '../../../lib/constants';
 
-// --- Next.js SSG & SEO Configuration ---
-
-// 1. Generate Static Params (SSG)
-// This tells Next.js to build these pages at compile time
-export async function generateStaticParams() {
-  return ARTICLES.map((post) => ({
-    id: post.id,
-  }));
-}
-
-// 2. Generate Metadata (SEO)
-// This injects dynamic title, description, and OG tags into the <head>
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const article = ARTICLES.find((a) => a.id === params.id);
-  
-  if (!article) return {};
-
-  const ogImage = article.imageUrl;
-  const publishedTime = new Date().toISOString(); // In a real app, use article.date
-
-  return {
-    title: `${article.title} | ${SITE_NAME}`,
-    description: article.description,
-    alternates: {
-      canonical: `${SITE_URL}/article/${article.id}`,
-    },
-    openGraph: {
-      title: article.title,
-      description: article.description,
-      type: 'article',
-      url: `${SITE_URL}/article/${article.id}`,
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: article.title,
-        },
-      ],
-      siteName: SITE_NAME,
-      locale: 'he_IL',
-      publishedTime,
-      authors: ['AI Illuminated Team'],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: article.title,
-      description: article.description,
-      images: [ogImage],
-    },
-  };
-}
-
-// --- Page Component ---
-
-export default function ArticlePage({ params }: { params: { id: string } }) {
-  const article = ARTICLES.find((a) => a.id === params.id);
+// In a real Vike app, this would be injected via PageContext
+export function Page({ routeParams }: { routeParams?: { id: string } }) {
+  // Use routeParams if available, or fall back to manual extraction for the preview shim
+  const id = routeParams?.id;
+  const article = ARTICLES.find((a) => a.id === id);
 
   if (!article) {
     return notFound();
@@ -72,43 +19,8 @@ export default function ArticlePage({ params }: { params: { id: string } }) {
     .filter(a => a.categoryId === article.categoryId && a.id !== article.id)
     .slice(0, 2);
 
-  // 3. Structured Data (JSON-LD)
-  // Essential for Google to understand this is a Blog Post
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: article.title,
-    description: article.description,
-    image: [article.imageUrl],
-    datePublished: '2024-01-01T00:00:00+02:00', // Mock date, connect to real data
-    dateModified: '2024-01-01T00:00:00+02:00', // Mock date, connect to real data
-    author: [{
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL
-    }],
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${SITE_URL}/logo.png`
-      }
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `${SITE_URL}/article/${article.id}`
-    }
-  };
-
   return (
     <article className="min-h-screen bg-slate-50 pb-20">
-      {/* Inject JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       {/* Header Image Background */}
       <div className="relative h-64 md:h-96 w-full">
          <div className="absolute inset-0 bg-slate-900">

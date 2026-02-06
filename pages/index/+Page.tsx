@@ -1,20 +1,10 @@
-
 import React from 'react';
-import { ARTICLES, CATEGORIES } from '../lib/data';
-import ArticleCard from '../components/ArticleCard';
-import { Link } from '../lib/router';
-import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '../lib/constants';
+import { ARTICLES, CATEGORIES } from '../../lib/data';
+import ArticleCard from '../../components/ArticleCard';
+import { Link } from '../../lib/router';
+import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '../../lib/constants';
 
-// Metadata export for Home Page
-export const metadata = {
-  title: `${SITE_NAME} | הבית של הבינה המלאכותית`,
-  description: SITE_DESCRIPTION,
-  alternates: {
-    canonical: SITE_URL,
-  }
-};
-
-export default function HomePage() {
+export function Page() {
   const recentArticles = ARTICLES.slice(0, 9); 
 
   const scrollToArticles = (e: React.MouseEvent) => {
@@ -25,31 +15,8 @@ export default function HomePage() {
     }
   };
 
-  // WebSite Schema for Google
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: SITE_NAME,
-    url: SITE_URL,
-    description: SITE_DESCRIPTION,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/search?q={search_term_string}`
-      },
-      'query-input': 'required name=search_term_string'
-    }
-  };
-
   return (
     <div className="min-h-screen">
-      {/* Inject JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-900 via-slate-900 to-slate-800 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>

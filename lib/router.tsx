@@ -12,10 +12,20 @@ const RouterContext = createContext<{
 export const useRouter = () => useContext(RouterContext);
 
 export const RouterProvider = ({ children }: { children?: React.ReactNode }) => {
-  // Initialize path from window.location.pathname
+  // Initialize path. In restricted environments, pathname might be '/index.html' or 
+  // a sandboxed path. We default to '/' unless we see a known app route.
   const [path, setPath] = useState(() => {
     if (typeof window === 'undefined') return '/';
-    return window.location.pathname === '' ? '/' : window.location.pathname;
+    
+    const p = window.location.pathname;
+    
+    // Explicitly check for known routes to support deep linking if the server supports it
+    if (p === '/glossary' || p.startsWith('/article/')) {
+      return p;
+    }
+    
+    // Otherwise, default to home (fixes issues where path is /index.html)
+    return '/';
   });
 
   useEffect(() => {
