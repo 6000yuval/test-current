@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '../lib/router';
+import { Link } from '../routes/router';
 import { Article, Category } from '../lib/types';
 import { Clock } from 'lucide-react';
 

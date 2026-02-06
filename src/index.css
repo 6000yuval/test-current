@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Heebo', sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+[dir="rtl"] .font-heebo {
+  font-family: 'Heebo', sans-serif;
+}

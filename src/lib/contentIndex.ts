@@ -1,9 +1,7 @@
 import React from 'react';
 import { Article, Category, GlossaryTerm } from './types';
 import { BookOpen, Zap, Brain, CheckCircle, Home, Briefcase, Layers, Shield, Star } from 'lucide-react';
-
-// Import from the generated content layer
-import * as Posts from '../generated/posts';
+import * as GeneratedPosts from '../generated/posts';
 
 export const CATEGORIES: Category[] = [
   { id: 'basics', title: 'הבסיס: מנגנון הפעולה', description: 'הבנת אופן הפעולה הטכני של מודלי שפה וההבדל בינם לבין מנועי חיפוש.', color: 'bg-slate-100 text-slate-700', icon: React.createElement(BookOpen, { className: "w-5 h-5" }) },
@@ -29,7 +27,7 @@ export const GLOSSARY: GlossaryTerm[] = [
   { term: 'Alignment (יישור)', definition: 'תהליך התאמת מטרות המודל והתנהגותו לערכים ולכוונות של בני האדם.' },
 ];
 
-export const ARTICLES: Article[] = Object.values(Posts);
+export const ARTICLES: Article[] = Object.values(GeneratedPosts);
 
 export const getPost = (id: string) => ARTICLES.find(a => a.id === id);
 export const getAllPosts = () => ARTICLES;

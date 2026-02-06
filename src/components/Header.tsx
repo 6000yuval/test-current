@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '../lib/router';
+import { Link } from '../routes/router';
 import { Brain } from 'lucide-react';
 
 export const Header: React.FC = () => {

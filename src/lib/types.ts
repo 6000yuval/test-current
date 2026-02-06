@@ -21,5 +21,5 @@ export interface Article {
   readTimeMinutes: number;
   lastUpdated: string;
   imageUrl: string;
-  content: React.ReactNode;
+  content: React.ReactNode; // In generated output this becomes JSX
 }

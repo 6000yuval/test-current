@@ -1,6 +1,6 @@
 import React from 'react';
 import { getPost, CATEGORIES, getAllPosts } from '../../lib/contentIndex';
-import { Link } from '../../lib/router';
+import { Link } from '../../routes/router';
 import { Clock, Calendar, ArrowRight } from 'lucide-react';
 import { buildArticleJsonLd } from '../../lib/seo';
 import { Page as NotFoundPage } from '../not-found/Page';

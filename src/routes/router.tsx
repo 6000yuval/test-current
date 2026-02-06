@@ -14,6 +14,7 @@ export const RouterProvider = ({ children }: { children?: React.ReactNode }) => 
   const [path, setPath] = useState(() => {
     if (typeof window === 'undefined') return '/';
     const p = window.location.pathname;
+    // Basic normalization for SPA routing
     if (p === '/glossary' || p.startsWith('/article/')) {
       return p;
     }

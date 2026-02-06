@@ -1,7 +1,6 @@
 import React from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import '../app/globals.css';
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (

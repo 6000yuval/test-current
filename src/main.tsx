@@ -1,7 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { RouterProvider, useRouter } from './lib/router';
+import { RouterProvider, useRouter } from './routes/router';
 import { AppShell } from './components/AppShell';
+import './index.css';
 
 // Pages
 import { Page as HomePage } from './pages/index/Page';

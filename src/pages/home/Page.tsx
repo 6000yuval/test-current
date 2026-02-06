@@ -1,6 +1,6 @@
 import React from 'react';
-import { getAllPosts, CATEGORIES } from '../../data/contentIndex';
-import { ArticleCard } from '../../app/components/ArticleCard';
+import { getAllPosts, CATEGORIES } from '../../lib/contentIndex';
+import { ArticleCard } from '../../components/ArticleCard';
 import { Link } from '../../routes/router';
 
 export function Page() {
